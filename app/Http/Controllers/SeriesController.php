@@ -18,7 +18,12 @@ class SeriesController extends Controller
         'series' => $series,
         ]); */
 
-        //A função acima é igual a de baixo
-        return view('listar-series', compact('series'));
+        /* return view('listar-series', compact('series')); */
+        //As funções acima são iguais a de baixo
+
+        return view('listar-series')
+            ->with('series.index', $series);
+
     }
+    //para serpar diretórios ao invés de ser usado "/", é usado ".", por isso fica series.index
 }
