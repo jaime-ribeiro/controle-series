@@ -22,7 +22,11 @@ class SeriesController extends Controller
         //As funções acima são iguais a de baixo
 
         return view('series.index')->with('series', $series);
-
     }
     //para serpar diretórios ao invés de ser usado "/", é usado ".", por isso fica series.index
+
+    public function create()
+    {
+        return view('series.create');
+    }
 }
